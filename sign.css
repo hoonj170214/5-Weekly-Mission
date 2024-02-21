@@ -1,0 +1,134 @@
+/* CSS 변수 */
+:root {
+  /* 컬러 */
+  --color-primary: #6d6afe;
+  --color-skyblue: #6ae3fe;
+  --color-red: #ff5b56;
+  --color-black: #111322;
+  --color-white: #ffffff;
+  --color-gray-900: #3e3e43;
+  --color-gray-700: #9fa6be;
+  --color-gray-500: #ccd5e3;
+  --color-gray-300: #e7effb;
+  --color-gray-100: #f0f6ff;
+  /* font-weight */
+  --font-bold: 700;
+  --font-semibold: 600;
+  --font-normal: 400;
+}
+
+/* font-face : pretendard cdn */
+@font-face {
+  font-family: 'pretendard';
+  src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css');
+  font-style: normal;
+}
+
+/* CSS reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'pretendard';
+  font-weight: var(--font-normal);
+  background-color: var(--color-gray-100);
+}
+
+/* body */
+body {
+  margin-top: 5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo img {
+  width: 210px;
+  height: 38px;
+}
+
+.form--desc {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.form--link {
+  color: var(--color-primary);
+  font-weight: var(--font-semibold);
+}
+
+.form--labelInput {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.form--input {
+  width: 400px;
+  height: 60px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-500);
+  border-radius: 8px;
+  padding: 18px 15px;
+}
+
+.form--input:focus {
+  border: 1px solid var(--color-primary);
+}
+
+/* 버튼(기본형) */
+.button {
+  border: none;
+  background-image: linear-gradient(
+    90deg,
+    var(--color-primary),
+    var(--color-skyblue)
+  );
+  color: var(--color-white);
+  padding: 16px 20px;
+  margin: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+/* 로그인 회원가입 버튼(변형) */
+.button--sign {
+  width: 400px;
+  height: 53px;
+  font-weight: var(--font-semibold);
+  font-size: 18px;
+  margin: 32px 0;
+}
+
+/* 소셜로그인 */
+.socialLogin {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-gray-300);
+  border: 1px solid var(--color-gray-500);
+  padding: 12px 24px;
+  width: 400px;
+  height: 66px;
+  border-radius: 8px;
+}
+
+.socialLogin--desc,
+.socialLogin--link {
+  background-color: var(--color-gray-300);
+}
+
+.socialLogin--link img,
+.socialLogin--link a {
+  width: 42px;
+  height: 42px;
+  border-radius: 100%;
+  background-color: var(--color-gray-300);
+}

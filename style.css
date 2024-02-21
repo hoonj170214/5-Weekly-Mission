@@ -1,0 +1,217 @@
+/* CSS 변수 */
+:root {
+  /* 컬러 */
+  --color-primary: #6d6afe;
+  --color-skyblue: #6ae3fe;
+  --color-red: #ff5b56;
+  --color-black: #111322;
+  --color-white: #ffffff;
+  --color-gray-900: #3e3e43;
+  --color-gray-700: #9fa6be;
+  --color-gray-500: #ccd5e3;
+  --color-gray-300: #e7effb;
+  --color-gray-100: #f0f6ff;
+  /* font-weight */
+  --font-bold: 700;
+  --font-semibold: 600;
+  --font-normal: 400;
+}
+
+/* font-face : pretendard cdn */
+@font-face {
+  font-family: 'pretendard';
+  src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css');
+  font-style: normal;
+}
+
+/* 버튼 기본형 */
+.button {
+  border: none;
+  background-image: linear-gradient(
+    90deg,
+    var(--color-primary),
+    var(--color-skyblue)
+  );
+  color: var(--color-white);
+  padding: 16px 20px;
+  margin: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* 로그인 버튼(변형) */
+.login {
+  width: 128px;
+  height: 53px;
+  text-decoration: none;
+  text-align: center;
+  margin-right: 200px;
+}
+
+/* 링크추가 버튼(변형) */
+.addLink {
+  width: 350px;
+  height: 53px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* CSS reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'pretendard';
+}
+
+/* body */
+body {
+  position: relative;
+}
+
+/* header */
+.header {
+  background-color: var(--color-gray-100);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 93px;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+}
+
+.header--title {
+  margin-left: 200px;
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-bold);
+  font-size: 64px;
+  line-height: 80px;
+  font-family: 'pretendard';
+  color: var(--color-black);
+}
+
+/* main */
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contents-01 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-gray-100);
+  text-align: center;
+  margin-top: 93px;
+}
+
+/* 랜딩페이지 강조문구 그라데이션  */
+/* 기본형 */
+.highlight {
+  color: transparent;
+  background-clip: text;
+}
+/* 변형 */
+.puplePink {
+  background-image: linear-gradient(90deg, #6d6afe, #ff9f9f);
+}
+.redSkyblue {
+  background-image: linear-gradient(90deg, #fe8a8a, #a4ceff);
+}
+.skyblueYellow {
+  background-image: linear-gradient(90deg, #6fbaff, #ffd88b);
+}
+.pupleBlack {
+  background-image: linear-gradient(90deg, #6d7ccd, #52888538);
+}
+.pinkSkyblue {
+  background-image: linear-gradient(90deg, #fe578f, #68e8f9);
+}
+
+/* 첫 이미지 */
+.contents-01--img {
+  width: 1200px;
+  height: 590px;
+}
+
+.content--title {
+  font-weight: var(--font-bold);
+  font-size: 48px;
+  line-height: 57.6px;
+  font-family: 'pretendard';
+  color: var(--color-black);
+  margin-bottom: 10px;
+}
+
+.content--desc {
+  font-weight: var(--font-normal);
+  font-size: 16px;
+  line-height: 24px;
+  font-family: 'pretendard';
+  color: #6b6b6b;
+}
+
+/* 상세 이미지 */
+.content--img {
+  width: 550px;
+  height: 450px;
+  border-radius: 15px;
+}
+
+/* 상세 글(기본형)  */
+.contents {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 135px;
+  margin: 100px;
+}
+/* 좌측 글 */
+.left {
+  flex-direction: row;
+}
+/* 우측 글 */
+.right {
+  flex-direction: row-reverse;
+}
+
+/* footer */
+footer {
+  width: 100%;
+  height: 160px;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  font-family: 'pretendard';
+  font-weight: var(--font-normal);
+}
+
+.footer--container {
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.codeit {
+  margin-left: 104px;
+}
+.footer--privacy {
+  display: flex;
+  gap: 30px;
+}
+.privacy,
+.faq {
+  text-decoration: none;
+  color: var(--color-white);
+}
+.sites {
+  margin-right: 104px;
+}
