@@ -1,44 +1,7 @@
-/* CSS 변수 */
-:root {
-  /* 컬러 */
-  --color-primary: #6d6afe;
-  --color-skyblue: #6ae3fe;
-  --color-red: #ff5b56;
-  --color-black: #111322;
-  --color-white: #ffffff;
-  --color-gray-900: #3e3e43;
-  --color-gray-700: #9fa6be;
-  --color-gray-500: #ccd5e3;
-  --color-gray-300: #e7effb;
-  --color-gray-100: #f0f6ff;
-  /* font-weight */
-  --font-bold: 700;
-  --font-semibold: 600;
-  --font-normal: 400;
+/* body */
+body {
+  position: relative;
 }
-
-/* font-face : pretendard cdn */
-@font-face {
-  font-family: 'pretendard';
-  src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css');
-  font-style: normal;
-}
-
-/* 버튼 기본형 */
-.button {
-  border: none;
-  background-image: linear-gradient(
-    90deg,
-    var(--color-primary),
-    var(--color-skyblue)
-  );
-  color: var(--color-white);
-  padding: 16px 20px;
-  margin: 10px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
 /* 로그인 버튼(변형) */
 .login {
   width: 128px;
@@ -58,18 +21,6 @@
   text-decoration: none;
 }
 
-/* CSS reset */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  font-family: 'pretendard';
-}
-
-/* body */
-body {
-  position: relative;
-}
-
 /* header */
 .header {
   background-color: var(--color-gray-100);
@@ -87,7 +38,7 @@ body {
   margin-left: 200px;
 }
 
-h1 {
+.header--h1 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -116,24 +67,33 @@ h1 {
 
 /* 랜딩페이지 강조문구 그라데이션  */
 /* 기본형 */
-.highlight {
+.highlight--purplePink {
   color: transparent;
   background-clip: text;
-}
-/* 변형 */
-.puplePink {
   background-image: linear-gradient(90deg, #6d6afe, #ff9f9f);
 }
-.redSkyblue {
+/* 변형 */
+.purplePink {
+  background-image: linear-gradient(90deg, #6d6afe, #ff9f9f);
+}
+.highlight--redSkyblue {
+  color: transparent;
+  background-clip: text;
   background-image: linear-gradient(90deg, #fe8a8a, #a4ceff);
 }
-.skyblueYellow {
+.highlight--skyblueYellow {
+  color: transparent;
+  background-clip: text;
   background-image: linear-gradient(90deg, #6fbaff, #ffd88b);
 }
-.pupleBlack {
+.highlight--pupleBlack {
+  color: transparent;
+  background-clip: text;
   background-image: linear-gradient(90deg, #6d7ccd, #52888538);
 }
-.pinkSkyblue {
+.highlight--pinkSkyblue {
+  color: transparent;
+  background-clip: text;
   background-image: linear-gradient(90deg, #fe578f, #68e8f9);
 }
 
@@ -175,13 +135,13 @@ h1 {
   gap: 135px;
   margin: 100px;
 }
-/* 좌측 글 */
+/* 우측 글 */
 .left {
-  flex-direction: row;
+  order: 0;
 }
 /* 우측 글 */
 .right {
-  flex-direction: row-reverse;
+  order: 1;
 }
 
 /* footer */

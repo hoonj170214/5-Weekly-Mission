@@ -1,0 +1,39 @@
+/* CSS 변수 */
+:root {
+  /* 컬러 */
+  --color-primary: #6d6afe;
+  --color-skyblue: #6ae3fe;
+  --color-red: #ff5b56;
+  --color-black: #111322;
+  --color-white: #ffffff;
+  --color-gray-900: #3e3e43;
+  --color-gray-700: #9fa6be;
+  --color-gray-500: #ccd5e3;
+  --color-gray-300: #e7effb;
+  --color-gray-100: #f0f6ff;
+  /* font-weight */
+  --font-bold: 700;
+  --font-semibold: 600;
+  --font-normal: 400;
+}
+
+/* font-face : pretendard cdn */
+@font-face {
+  font-family: 'pretendard';
+  src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css');
+  font-style: normal;
+}
+/* 버튼 기본형 */
+.button {
+  border: none;
+  background-image: linear-gradient(
+    90deg,
+    var(--color-primary),
+    var(--color-skyblue)
+  );
+  color: var(--color-white);
+  padding: 16px 20px;
+  margin: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
