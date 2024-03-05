@@ -9,7 +9,7 @@
 */
 
 function createErrorMessage(message) {
-  let errorMessage = document.createElement('div');
+  const errorMessage = document.createElement('div');
   errorMessage.textContent = message;
   errorMessage.className = 'error-message';
   return errorMessage;
@@ -20,8 +20,8 @@ function appendErrorMessage(errorContainer, message) {
 }
 
 function showErrorMessage(emailErrorMessage, passwordErrorMessage) {
-  let emailInput = document.querySelector('.sign-input');
-  let passwordInput = document.querySelector('sign-input:nth-child(2)');
+  const emailInput = document.querySelector('.sign-input');
+  const passwordInput = document.querySelector('sign-input:nth-child(2)');
 
   if (emailInput.value === '') {
     appendErrorMessage(emailErrorMessage, '이메일을 입력해주세요');
@@ -39,17 +39,17 @@ function showErrorMessage(emailErrorMessage, passwordErrorMessage) {
 }
 
 function validateForm() {
-  let emailErrorContainer = document.querySelector(
+  const emailErrorContainer = document.querySelector(
     '.sign-input--error-container'
   );
-  let passwordErrorContainer = document.querySelector(
+  const passwordErrorContainer = document.querySelector(
     '.sign-input--error-container:nth-child(2)'
   );
   showErrorMessage(emailErrorContainer, passwordErrorContainer);
 }
 
-let emailInput = document.querySelector('.sign-input');
-let passwordInput = document.querySelector('sign-input:nth-child(2)');
+const emailInput = document.querySelector('.sign-input');
+const passwordInput = document.querySelector('sign-input:nth-child(2)');
 
 emailInput.addEventListener('focusout', validateForm);
 passwordInput.addEventListener('focusout', validateForm);
