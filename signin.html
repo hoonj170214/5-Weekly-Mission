@@ -1,60 +1,56 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <title>로그인</title>
+    <meta
+      name="viewport"
+      content="width=device-width,minimum-scale=1,initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
     <link
       rel="stylesheet"
-      as="style"
-      crossorigin
-      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
     />
-    <link rel="stylesheet" href="./auth.css" />
-    <link rel="stylesheet" href="./common.css" />
-    <link rel="stylesheet" href="./reset.css" />
-
-    <title>로그인</title>
+    <link rel="stylesheet" href="./src/sign.css" />
   </head>
   <body>
-    <form class="auth-form">
-      <h1 class="logo">
-        <a href="./index.html"><img src="./img/Linkbrary.png" alt="logo" /></a>
-      </h1>
-      <div class="auth-form--desc">
-        <p class="auth-form--validate">회원이 아니신가요?</p>
-        <a class="auth-form--link" href="./signup.html">회원 가입하기</a>
-      </div>
-      <div class="auth-form--labelInput">
-        <label class="auth-form--label" for="email">이메일</label>
-        <input
-          placeholder="codeit@codeit.com"
-          class="auth-form--input"
-          id="email"
-          name="email"
-        />
-      </div>
-      <div class="auth-form--labelInput">
-        <label class="auth-form--label" for="password">비밀번호</label>
-        <input
-          placeholder="********"
-          class="auth-form--input"
-          id="password"
-          name="password"
-          type="password"
-        />
-      </div>
-      <button class="button button--sign">로그인</button>
-      <div class="social-Login">
-        <p class="social-Login--desc">소셜 로그인</p>
-        <div class="social-Login--link">
-          <a class="social-Login--goggle" href="https://www.google.com"
-            ><img src="./img/socialLogin/google_logo.png" alt="구글 로그인"
-          /></a>
-          <a class="social-Login--kakao" href="https://www.kakaocorp.com/page/"
-            ><img src="./img/socialLogin/kakao_logo.png" alt="카카오 로그인"
-          /></a>
+    <header>
+      <a class="logo-link" href="index.html">
+        <img class="header-logo" src="./images/logo.svg" alt="홈으로 연결된 Linkbrary 로고" />
+      </a>
+      <p class="header-message">
+        회원이 아니신가요?<a class="header-link" href="signup.html">회원 가입하기</a>
+      </p>
+    </header>
+    <div class="sign-box">
+      <form class="sign-form">
+        <div class="sign-inputs">
+          <div class="sign-input-box">
+            <label class="sign-input-label">이메일</label>
+            <input class="sign-input" />
+          </div>
+          <div class="sign-input-box sign-password">
+            <label class="sign-input-label">비밀번호</label>
+            <input class="sign-input" type="password" />
+            <button class="eye-button" type="button">
+              <img src="./images/eye-off.svg" />
+            </button>
+          </div>
+        </div>
+        <button class="cta" type="submit">로그인</button>
+      </form>
+      <div class="sns-box">
+        <span class="sns-text">소셜 로그인</span>
+        <div class="sns-links">
+          <a class="sns-link google-link" href="https://www.google.com/">
+            <img src="./images/google.png" />
+          </a>
+          <a class="sns-link kakao-link" href="https://www.kakaocorp.com/page/">
+            <img src="./images/kakao.svg" />
+          </a>
         </div>
       </div>
-    </form>
+    </div>
   </body>
 </html>
