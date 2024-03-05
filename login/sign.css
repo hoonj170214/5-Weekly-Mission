@@ -1,4 +1,4 @@
-@import "./global.css";
+@import './global.css';
 
 body {
   background-color: var(--background);
@@ -90,7 +90,8 @@ header {
   font-weight: 400;
 }
 
-.sign-input {
+.sign-input-email,
+.sign-input-password {
   padding: 1.8rem 1.5rem;
   border-radius: 0.8rem;
   border: 0.1rem solid var(--gray20);
@@ -98,7 +99,8 @@ header {
   line-height: 150%;
 }
 
-.sign-input:focus {
+.sign-input-email:focus,
+.sign-input-password:focus {
   border-color: var(--primary);
 }
 
