@@ -145,7 +145,7 @@ header {
   }
 }
 
-article {
+main {
   padding-bottom: 4rem;
 
   @media (min-width: 768px) {
@@ -158,7 +158,7 @@ article {
   }
 }
 
-section {
+.section-container {
   display: grid;
   justify-content: center;
   row-gap: 1.6rem;
@@ -219,7 +219,7 @@ section:nth-of-type(even) {
   }
 }
 
-.title {
+.section-container__title {
   grid-area: title;
   font-weight: 700;
   letter-spacing: -0.03rem;
@@ -244,7 +244,7 @@ section:nth-of-type(even) {
   background-image: linear-gradient(310deg, #fe578f 0%, #68e8f9 100%);
 }
 
-.description {
+.section-container__description {
   grid-area: description;
   font-size: 1.5rem;
   font-weight: 500;
@@ -264,7 +264,7 @@ section:nth-of-type(even) {
   }
 }
 
-.content-image {
+.section-container__image {
   grid-area: image;
   width: 100%;
   padding-top: 0.4rem;
