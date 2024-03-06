@@ -8,18 +8,16 @@
 - 로그인 버튼 클릭 또는 Enter키 입력으로 로그인 실행돼야 합니다.
 */
 
-function createErrorMessage(message) {
-  message.textContent = message;
-  return message;
-}
+// function createErrorMessage(message) {
+//   message.textContent = message;
+//   return message;
+// }
 
 function appendErrorMessage(errorContainer, message) {
   errorContainer.innerHTML = message;
 }
 
 function showEmailErrorMessage(emailErrorMessage) {
-  const emailInput = document.querySelector('input[type="email"]');
-
   if (emailInput.value === '') {
     appendErrorMessage(emailErrorMessage, '이메일을 입력해주세요');
   } else if (emailInput.value.indexOf('@') === -1) {
@@ -29,9 +27,7 @@ function showEmailErrorMessage(emailErrorMessage) {
   }
 }
 
-function showPasswordErrorMessage(emailErrorMessage, passwordErrorMessage) {
-  const passwordInput = document.querySelector('input[type="password"]');
-
+function showPasswordErrorMessage(passwordErrorMessage) {
   if (passwordInput.value === '') {
     appendErrorMessage(passwordErrorMessage, '비밀번호를 입력해주세요');
   } else {
@@ -39,21 +35,24 @@ function showPasswordErrorMessage(emailErrorMessage, passwordErrorMessage) {
   }
 }
 
-function validateForm() {
-  const emailErrorContainer = document.querySelector(
-    '.sign-input--error-container'
-  );
-  const passwordErrorContainer = document.querySelector(
-    '.sign-input--error-container:nth-child(2)'
-  );
-  showErrorMessage(emailErrorContainer, passwordErrorContainer);
+function validateEmail() {
+  showEmailErrorMessage(emailErrorMessage);
+}
+function validatePassword() {
+  showPasswordErrorMessage(passwordErrorMessage);
 }
 
 const emailInput = document.querySelector('input[type="email"]');
+const emailErrorMessage = document.querySelector(
+  '.form-group__error-message--email'
+);
 const passwordInput = document.querySelector('input[type="password"]');
+const passwordErrorMessage = document.querySelector(
+  '.form-group__error-message--password'
+);
 
-emailInput.addEventListener('focusout', validateForm);
-passwordInput.addEventListener('focusout', validateForm);
+emailInput.addEventListener('focusout', validateEmail);
+passwordInput.addEventListener('focusout', validatePassword);
 
 document.addEventListener('keydown', function (event) {
   if (event.key === 'Enter') {

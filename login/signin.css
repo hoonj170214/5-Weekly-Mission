@@ -103,6 +103,11 @@ header {
 .form-group__password:focus {
   border-color: var(--primary);
 }
+.form-group__error-message--email,
+.form-group__error-message--password {
+  color: var(--red);
+  font-size: 1.3rem;
+}
 
 .form-group__eye-button {
   position: absolute;
@@ -110,6 +115,9 @@ header {
   right: 1.5rem;
   width: 1.6rem;
   height: 1.6rem;
+}
+.form-group__eye-button > img {
+  position: relative;
 }
 
 .cta {
