@@ -17,9 +17,8 @@ function appendErrorMessage(errorContainer, message) {
   errorContainer.innerHTML = message;
 }
 
-function showErrorMessage(emailErrorMessage, passwordErrorMessage) {
+function showEmailErrorMessage(emailErrorMessage) {
   const emailInput = document.querySelector('input[type="email"]');
-  const passwordInput = document.querySelector('input[type="password"]');
 
   if (emailInput.value === '') {
     appendErrorMessage(emailErrorMessage, '이메일을 입력해주세요');
@@ -28,6 +27,10 @@ function showErrorMessage(emailErrorMessage, passwordErrorMessage) {
   } else {
     appendErrorMessage(emailErrorMessage, '');
   }
+}
+
+function showPasswordErrorMessage(emailErrorMessage, passwordErrorMessage) {
+  const passwordInput = document.querySelector('input[type="password"]');
 
   if (passwordInput.value === '') {
     appendErrorMessage(passwordErrorMessage, '비밀번호를 입력해주세요');
@@ -46,14 +49,14 @@ function validateForm() {
   showErrorMessage(emailErrorContainer, passwordErrorContainer);
 }
 
-const emailInput = document.querySelector('.sign-input');
-const passwordInput = document.querySelector('sign-input:nth-child(2)');
+const emailInput = document.querySelector('input[type="email"]');
+const passwordInput = document.querySelector('input[type="password"]');
 
 emailInput.addEventListener('focusout', validateForm);
 passwordInput.addEventListener('focusout', validateForm);
 
 document.addEventListener('keydown', function (event) {
   if (event.key === 'Enter') {
-    validateForm();
+    event.preventDefault();
   }
 });
