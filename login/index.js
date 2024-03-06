@@ -9,10 +9,8 @@
 */
 
 function createErrorMessage(message) {
-  const errorMessage = document.createElement('div');
-  errorMessage.textContent = message;
-  errorMessage.className = 'error-message';
-  return errorMessage;
+  message.textContent = message;
+  return message;
 }
 
 function appendErrorMessage(errorContainer, message) {
@@ -20,8 +18,8 @@ function appendErrorMessage(errorContainer, message) {
 }
 
 function showErrorMessage(emailErrorMessage, passwordErrorMessage) {
-  const emailInput = document.querySelector('.sign-input');
-  const passwordInput = document.querySelector('sign-input:nth-child(2)');
+  const emailInput = document.querySelector('input[type="email"]');
+  const passwordInput = document.querySelector('input[type="password"]');
 
   if (emailInput.value === '') {
     appendErrorMessage(emailErrorMessage, '이메일을 입력해주세요');
