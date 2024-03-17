@@ -49,7 +49,9 @@ header {
   border-bottom: 0.1rem solid var(--primary);
 }
 
+
 .sign-container {
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -69,17 +71,21 @@ header {
   width: 100%;
 }
 
+
 .sign-form__body {
+
   display: flex;
   flex-direction: column;
   row-gap: 2.4rem;
 }
 
 .form-group {
+
   display: flex;
   flex-direction: column;
   row-gap: 1.2rem;
 }
+
 
 .password-container {
   position: relative;
@@ -120,6 +126,7 @@ header {
   width: 1.6rem;
   height: 1.6rem;
 }
+
 
 .form-group__eye-button > img {
   position: relative;
